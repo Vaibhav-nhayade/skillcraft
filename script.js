@@ -1,17 +1,10 @@
-// DARK MODE
 const toggle = document.getElementById("themeToggle");
-let dark = false;
+let darkMode = false;
 
 toggle.addEventListener("click", () => {
     document.body.classList.toggle("dark");
-    dark = !dark;
-    document.querySelector(".theme-icon").src = dark ? "skillcraft/moon.svg" : "skillcraft/sun.svg";
-});
+    darkMode = !darkMode;
 
-// MOBILE MENU
-const menuBtn = document.getElementById("mobileMenuBtn");
-const navMenu = document.getElementById("navMenu");
-
-menuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
+    document.querySelector(".theme-icon").src =
+        darkMode ? "skillcraft/moon.svg" : "skillcraft/sun.svg";
 });
